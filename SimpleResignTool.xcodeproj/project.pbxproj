@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74D865A419F74156008C1074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D865A319F74156008C1074 /* main.m */; };
+		74D865A719F74156008C1074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D865A619F74156008C1074 /* AppDelegate.m */; };
+		74D865A919F74156008C1074 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D865A819F74156008C1074 /* Images.xcassets */; };
+		74D865AC19F74156008C1074 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D865AA19F74156008C1074 /* MainMenu.xib */; };
+		74D865C419F7419F008C1074 /* EntitlementsTemplate.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74D865C119F7419F008C1074 /* EntitlementsTemplate.plist */; };
+		74D865C519F7419F008C1074 /* ResignManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D865C319F7419F008C1074 /* ResignManager.m */; };
+		74D865CA19F75876008C1074 /* DevicesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D865C819F75876008C1074 /* DevicesWindowController.m */; };
+		74D865CB19F75876008C1074 /* DevicesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D865C919F75876008C1074 /* DevicesWindowController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		74D8659E19F74156008C1074 /* SimpleResignTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleResignTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74D865A219F74156008C1074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74D865A319F74156008C1074 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74D865A519F74156008C1074 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		74D865A619F74156008C1074 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		74D865A819F74156008C1074 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		74D865AB19F74156008C1074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		74D865C119F7419F008C1074 /* EntitlementsTemplate.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EntitlementsTemplate.plist; sourceTree = "<group>"; };
+		74D865C219F7419F008C1074 /* ResignManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResignManager.h; sourceTree = "<group>"; };
+		74D865C319F7419F008C1074 /* ResignManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResignManager.m; sourceTree = "<group>"; };
+		74D865C719F75876008C1074 /* DevicesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicesWindowController.h; sourceTree = "<group>"; };
+		74D865C819F75876008C1074 /* DevicesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesWindowController.m; sourceTree = "<group>"; };
+		74D865C919F75876008C1074 /* DevicesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DevicesWindowController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74D8659B19F74156008C1074 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74D8659519F74156008C1074 = {
+			isa = PBXGroup;
+			children = (
+				74D865A019F74156008C1074 /* SimpleResignTool */,
+				74D8659F19F74156008C1074 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74D8659F19F74156008C1074 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74D8659E19F74156008C1074 /* SimpleResignTool.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74D865A019F74156008C1074 /* SimpleResignTool */ = {
+			isa = PBXGroup;
+			children = (
+				74D865A519F74156008C1074 /* AppDelegate.h */,
+				74D865A619F74156008C1074 /* AppDelegate.m */,
+				74D865C119F7419F008C1074 /* EntitlementsTemplate.plist */,
+				74D865C219F7419F008C1074 /* ResignManager.h */,
+				74D865C319F7419F008C1074 /* ResignManager.m */,
+				74D865C719F75876008C1074 /* DevicesWindowController.h */,
+				74D865C819F75876008C1074 /* DevicesWindowController.m */,
+				74D865C919F75876008C1074 /* DevicesWindowController.xib */,
+				74D865A819F74156008C1074 /* Images.xcassets */,
+				74D865AA19F74156008C1074 /* MainMenu.xib */,
+				74D865A119F74156008C1074 /* Supporting Files */,
+			);
+			path = SimpleResignTool;
+			sourceTree = "<group>";
+		};
+		74D865A119F74156008C1074 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74D865A219F74156008C1074 /* Info.plist */,
+				74D865A319F74156008C1074 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74D8659D19F74156008C1074 /* SimpleResignTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74D865BB19F74156008C1074 /* Build configuration list for PBXNativeTarget "SimpleResignTool" */;
+			buildPhases = (
+				74D8659A19F74156008C1074 /* Sources */,
+				74D8659B19F74156008C1074 /* Frameworks */,
+				74D8659C19F74156008C1074 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleResignTool;
+			productName = SimpleResignTool;
+			productReference = 74D8659E19F74156008C1074 /* SimpleResignTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74D8659619F74156008C1074 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = EthanolWu;
+				TargetAttributes = {
+					74D8659D19F74156008C1074 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 74D8659919F74156008C1074 /* Build configuration list for PBXProject "SimpleResignTool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 74D8659519F74156008C1074;
+			productRefGroup = 74D8659F19F74156008C1074 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74D8659D19F74156008C1074 /* SimpleResignTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74D8659C19F74156008C1074 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74D865C419F7419F008C1074 /* EntitlementsTemplate.plist in Resources */,
+				74D865A919F74156008C1074 /* Images.xcassets in Resources */,
+				74D865AC19F74156008C1074 /* MainMenu.xib in Resources */,
+				74D865CB19F75876008C1074 /* DevicesWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74D8659A19F74156008C1074 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74D865A719F74156008C1074 /* AppDelegate.m in Sources */,
+				74D865C519F7419F008C1074 /* ResignManager.m in Sources */,
+				74D865A419F74156008C1074 /* main.m in Sources */,
+				74D865CA19F75876008C1074 /* DevicesWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		74D865AA19F74156008C1074 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74D865AB19F74156008C1074 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74D865B919F74156008C1074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		74D865BA19F74156008C1074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		74D865BC19F74156008C1074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SimpleResignTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74D865BD19F74156008C1074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SimpleResignTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74D8659919F74156008C1074 /* Build configuration list for PBXProject "SimpleResignTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74D865B919F74156008C1074 /* Debug */,
+				74D865BA19F74156008C1074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74D865BB19F74156008C1074 /* Build configuration list for PBXNativeTarget "SimpleResignTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74D865BC19F74156008C1074 /* Debug */,
+				74D865BD19F74156008C1074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74D8659619F74156008C1074 /* Project object */;
+}
