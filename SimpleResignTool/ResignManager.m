@@ -8,6 +8,19 @@
 
 #import "ResignManager.h"
 #import <Security/Security.h>
+#import "AppKit/NSAlert.h"
+
+
+
+@interface ResignManager ()
+{
+
+    NSString* mTempFilePath;
+
+}
+
+@end
+
 
 
 @implementation ResignManager
@@ -46,6 +59,8 @@
         
         mProvisioningProfileAppID = @"";
         mProvisioningProfileExpirationDate = @"";
+        
+        mTempFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"SimpleResignTool"];
         
         
         [self getCertificatesFromKeychain];
@@ -142,46 +157,45 @@
 
 - (void)unzipIPA:(NSString*)originalIPAFilePath
 {
-    NSString* tempIPAFolderName = @"Payload";
-    
     NSFileManager* fileManager = [NSFileManager defaultManager];
     
     BOOL isDir = NO;
-    BOOL bIsIPAFolderExist = [fileManager fileExistsAtPath:tempIPAFolderName isDirectory:&isDir];
+    BOOL bIsIPAFolderExist = [fileManager fileExistsAtPath:mTempFilePath isDirectory:&isDir];
     if(bIsIPAFolderExist && isDir)
     {
-        [fileManager removeItemAtPath:tempIPAFolderName error:nil];
+        [fileManager removeItemAtPath:mTempFilePath error:nil];
+        NSLog(@"Delete folder: %@", mTempFilePath);
     }
     
     
 
     
     
-//    NSPipe *pipe = [NSPipe pipe];
-//    NSFileHandle *file = pipe.fileHandleForReading;
+//NSPipe *pipe = [NSPipe pipe];
+//NSFileHandle *file = pipe.fileHandleForReading;
     
     NSTask *task = [[NSTask alloc] init];
     task.launchPath = @"/usr/bin/unzip";
-    task.arguments = @[@"-q", originalIPAFilePath];   //(NSString*)[mSelectedIPAs lastObject]];
-//    task.standardOutput = pipe;
+    task.arguments = @[@"-q", originalIPAFilePath, @"-d", mTempFilePath];   //(NSString*)[mSelectedIPAs lastObject]];
+//task.standardOutput = pipe;
     
     [task launch];
     [task waitUntilExit];
-//    NSData *data = [file readDataToEndOfFile];
-//    [file closeFile];
-//    
-//    NSString *grepOutput = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-//    NSLog (@"returned:\n%@", grepOutput);
+//NSData *data = [file readDataToEndOfFile];
+//[file closeFile];
+    
+//NSString *grepOutput = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+//NSLog (@"returned:\n%@", grepOutput);
+
 }
 
 
 - (void)removeSignature
 {
-
     NSTask *task = [[NSTask alloc] init];
 
     task.launchPath = @"/bin/sh";
-    task.arguments = @[@"-c", @"rm -rfv Payload/*.app/_CodeSignature"];//, @"Payload/*.app/CodeResources"];
+    task.arguments = @[@"-c", [NSString stringWithFormat:@"rm -rfv %@/Payload/*.app/_CodeSignature", mTempFilePath]];//, @"Payload/*.app/CodeResources"];
     
     [task launch];
     [task waitUntilExit];
@@ -195,7 +209,7 @@
 
     
     task.launchPath = @"/bin/sh";
-    task.arguments = @[@"-c", [NSString stringWithFormat:@"cp %s Payload/*.app/embedded.mobileprovision", url.fileSystemRepresentation]];
+    task.arguments = @[@"-c", [NSString stringWithFormat:@"cp %s %@/Payload/*.app/embedded.mobileprovision", url.fileSystemRepresentation, mTempFilePath]];
     
     [task launch];
     [task waitUntilExit];
@@ -229,7 +243,7 @@
                                   error:&error];
 
     task.launchPath = @"/bin/sh";
-    task.arguments = @[@"-c", [NSString stringWithFormat:@"/usr/bin/codesign -f -s \"%@\" --resource-rules Payload/*.app/ResourceRules.plist --entitlements \"%@\" Payload/*.app", mSelectedCertificate, entitlementsPath]];
+    task.arguments = @[@"-c", [NSString stringWithFormat:@"/usr/bin/codesign -f -s \"%@\" --resource-rules %@/Payload/*.app/ResourceRules.plist --entitlements \"%@\" %@/Payload/*.app", mSelectedCertificate, mTempFilePath, entitlementsPath, mTempFilePath]];
     
     [task launch];
     [task waitUntilExit];
@@ -239,7 +253,7 @@
 {
     NSTask *task = [[NSTask alloc] init];
     task.launchPath = @"/bin/sh";
-    task.arguments = @[@"-c", [NSString stringWithFormat:@"zip -qr \"%@\" Payload", outputIPAFilePath]];
+    task.arguments = @[@"-c", [NSString stringWithFormat:@"cd %@;zip -qr \"%@\" Payload",mTempFilePath, outputIPAFilePath]];
     
     NSLog(@"%@",  [NSString stringWithFormat:@"zip -qr %@ Payload", outputIPAFilePath] );
     
