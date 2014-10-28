@@ -262,5 +262,12 @@
 }
 
 
+// close app when there is no any windows
+-(BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
+{
+    return YES;
+}
+
+
 
 @end
